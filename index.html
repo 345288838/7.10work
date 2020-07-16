@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天猫模拟</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .fir{
+            width: 100%;
+            height: 50px;
+            background-color: red;
+            position: fixed;
+            left: 0;
+            top: -50px;
+            transition: top .5s ease;
+        }
+        .left{
+            width: 36px;
+            height: 369px;
+            opacity: 0;
+            transform: scale(0,0);
+            transform-origin: left bottom;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            top: 0;
+            /* border: 1px solid #000; */
+            transition: all .5s ease;
+        }
+        .left li{
+            width: 100%;
+            height: 36px;
+            /* border: 1px solid #000; */
+            box-sizing: border-box;
+
+        }
+        /* .left li:nth-last-child(1){
+            border-bottom: none;
+        } */
+    </style>
+</head>
+<body>
+    <div class="fir">
+
+    </div>
+    <div class="nav">
+        <div class="nav-list">
+            <div class="logo-info">
+                <em>喵，欢迎来天猫</em>
+                <a href="#" class="nav-login">请登录</a>
+                <a href="#" class="nav-register">免费注册</a>
+            </div>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-hd1" >我的淘宝<b></b></a>
+                    <div class="hd" style="display: none;" style="z-index: 93110;">
+                      <ul class="buy">
+                        <li><a href="#">已买到的宝贝</a></li>
+                        <li><a href="#">已卖出的宝贝</a></li>
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-item2">
+                    <img src="imgs/gouwuche.png" alt="" style="width: 12px;height: 12px;">
+                    <a href="#">购物车</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-hd2">收藏夹<b></b></a>
+                    <div class="bd" style="display: none;">
+                        <ul class="collect" >
+                            <li><a href="#">收藏的宝贝</a></li>
+                            <li><a href="#">收藏的店铺</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="spe"></li>
+                <li class="menu-item2">
+                    <div class="menu-hd5">
+                    <img src="imgs/shouji.png" alt="" style="width: 12px;height: 12px;">
+                    <a href="#" >手机版</a></div>
+                    <div class="imgs-container" style="display: none;">
+                        <div class="imgs"></div>
+                        <p></p>
+                        <b></b>
+                    </div>
+                    
+                </li>
+                <li class="menu-item2">
+                    <a href="#">淘宝网</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-hd3">商家支持<b></b></a>
+                    <div class="seller" style="display: none;" style="z-index: 1;">
+                        <ul>
+                            <li>
+                                <h3>商家:</h3>
+                                <a href="#">商家中心</a>
+                                <a href="#">天猫规则</a>
+                                <a href="#">商家入驻</a>
+                                <a href="#">运营服务</a>
+                                <a href="#">商家品控</a>
+                                <a href="#">商家工具</a>
+                                <a href="#">天猫智库</a>
+                                <a href="#">喵言喵语</a>
+                            </li>
+                            <li>
+                                <h3>帮助:</h3>
+                                <a href="#">帮助中心</a>
+                                <a href="#">问商友</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <img src="imgs/daohang.png" style="width: 12px;height: 12px;" alt="">
+                    <a href="#" class="menu-hd4">网站导航<b></b></a>
+                    <div class="web" style="display: none;" style="z-index: 9;">
+                        <div class="site-hot">
+                            <h2>热点推荐
+                                <span>Hot</span>
+                            </h2>
+                            <ul class="site-list">
+                                <li><a href="#">天猫超市</a></li>
+                                <li><a href="#">喵生鲜</a></i></li>
+                                <li><a href="#">科技新品</a><i class="site-icon"></i></li>
+                                <li><a href="#">女装新品</a><i class="site-icon1"></i></li>
+                                <li><a href="#">酷玩街</a></li>
+                                <li><a href="#">内衣新品</a><i class="site-icon1"></i></li>
+                                <li><a href="#">试美妆</a></li>
+                                <li><a href="#">运动新品</a></li>
+                                <li><a href="#">时尚先生</a><i class="site-icon1"></i></li>
+                                <li><a href="#">精明妈咪</a></li>
+                                <li><a href="#">吃乐会</a><i class="site-icon"></i></li>
+                                <li><a href="#">企业采购</a></li>
+                                <li><a href="#">会员积分</a></li>
+                                <li><a href="#">天猫国际</a></li>
+                                <li><a href="#">品质频道</a></li>
+                            </ul>
+                        </div>
+                        <div class="site-markte">
+                            <h2>行业市场</h2>
+                            <ul class="site-list">
+                                <li><a href="#">美妆</a></li>
+                                <li><a href="#">电器</a></i></li>
+                                <li><a href="#">女装</a><i class="site-icon"></i></li>
+                                <li><a href="#">男装</a><i class="site-icon1"></i></li>
+                                <li><a href="#">女鞋</a></li>
+                                <li><a href="#">男鞋</a><i class="site-icon1"></i></li>
+                                <li><a href="#">内衣</a></li>
+                                <li><a href="#">箱包</a></li>
+                                <li><a href="#">运动</a><i class="site-icon1"></i></li>
+                                <li><a href="#">母婴</a></li>
+                                <li><a href="#">家装</a><i class="site-icon"></i></li>
+                                <li><a href="#">医药</a></li>
+                                <li><a href="#">食品</a></li>
+                                <li><a href="#">配饰</a></li>
+                                <li><a href="#">汽车</a></li>
+                            </ul>
+                        </div>
+                        <div class="site-help">
+                            <h2>服务指南
+                                <span>Help</span>
+                            </h2>
+                            <ul class="site-list">
+                                <li><a href="#">帮助中心</a></li>
+                                <li><a href="#">品质保障</a></li>
+                                <li><a href="#">特色服务</a></li>
+                                <li><a href="#">7天退换货</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="search">
+        <div class="search-container">
+            <div class="search-banner">
+            </div>
+            <div class="search-input">
+                <form action="">
+                    <input title="请输入搜索文字" type="text" class="search-text" placeholder="搜索 天猫 商品/品牌/店铺" style="z-index: 0;">
+                    <input type="button" value="搜索" class="search-button">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-con">
+            <div class="con-list">
+                <a href="#"><img src="./imgs/mao3.png" alt=""></a>
+                <a href="#"><img src="./imgs/mao2.png" alt=""></a>
+                <a href="#">天猫会员</a>
+                <a href="#">电器城</a>
+                <a href="#">喵鲜生</a>
+                <a href="#">医药馆</a>
+                <a href="#">营业厅</a>
+                <a href="#">魅力惠</a>
+                <a href="#">飞猪旅行</a>
+                <a href="#">苏宁易购</a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-con">
+                <div class="banner-img">
+                    <img src="./imgs/tmall.png" alt="">
+                </div>
+                <div class="banner-cate">
+                    <i class="cate-con">三</i>
+                    <div class="cate-type">商品分类</div>
+                </div>
+                <div class="banner-content">
+                    <ul class="banner-content-list">
+                        <li class="cate-item">
+                            <img src="./imgs/t1.png" alt="">
+                            <a href="#">女装</a>/ <a href="#">内衣</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t2.png" alt="">
+                            <a href="#">男装</a>/ <a href="#">运动户外</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t3.png" alt="">
+                            <a href="#">女鞋</a>/ <a href="#">男鞋</a>/ <a href="#">箱包</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t4.png" alt="">
+                            <a href="#">美妆 </a>/ <a href="#">个人护理</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t5.png" alt="">
+                            <a href="#">腕表</a>/ <a href="#">眼镜</a>/ <a href="#">珠宝饰品</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t6.png" alt="">
+                            <a href="#">手机</a>/ <a href="#">数码啊</a>/ <a href="#">电脑办公</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t7.png" alt="">
+                            <a href="#">母婴玩具</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t8.png" alt="">
+                            <a href="#">零食</a>/ <a href="#">茶酒</a>/ <a href="#">进口食品</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t9.png" alt="">
+                            <a href="#">生鲜水果</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t10.png" alt="">
+                            <a href="#">大家电</a>/ <a href="#">生活电器</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t11.png" alt="">
+                            <a href="#">家居建材</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t12.png" alt="">
+                            <a href="#">汽车</a>/ <a href="#">配件</a>/ <a href="#">用品 </a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t13.png" alt="">
+                            <a href="#">家纺</a>/ <a href="#">家饰</a>/ <a href="#">鲜花</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t14.png" alt="">
+                            <a href="#">医药保健 </a>/ <a href="#">内衣</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t15.png" alt="">
+                            <a href="#">厨具</a>/ <a href="#">收纳</a>/ <a href="#">宠物</a>
+                        </li>
+                        <li class="cate-item">
+                            <img src="./imgs/t15.png" alt="">
+                            <a href="#">图书音像</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="backimg" style="z-index: 1;">
+                <div class="banner-back">
+                    <div class="back-img"></div>
+                </div>
+            </div>
+            <div class="backimg">
+                <div class="banner-back1">
+                    <div class="back-img1"></div>
+                </div>
+            </div>
+            <div class="backimg">
+                <div class="banner-back2">
+                    <div class="back-img2"></div>
+                </div>
+            </div>
+            <div class="backimg">
+                <div class="banner-back3">
+                    <div class="back-img3"></div>
+                </div>
+            </div>
+            <div class="backimg">
+                <div class="banner-back4">
+                    <div class="back-img4"></div>
+                </div>
+            </div>
+            <div class="backimg">
+                <div class="banner-back5">
+                    <div class="back-img5"></div>
+                </div>
+            </div>
+            <div class="banner-slider">
+                <ul>
+                    <li class="slider-item"></li>
+                    <li class="slider-item"></li>
+                    <li class="slider-item"></li>
+                    <li class="slider-item"></li>
+                    <li class="slider-item"></li>
+                    <li class="slider-item"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="part1">
+            <div class="part1-container">
+                <img src="./imgs/xr.png" alt="" class="part1-title">
+                <a href="#"><img class="part1-imgs" src="./imgs/part1.png" alt=""></a>
+                <a href="#"><img class="part1-imgs" src="./imgs/part1.png" alt=""></a>
+                <a href="#"><img class="part1-imgs" src="./imgs/part1.png" alt=""></a>
+                <a href="#"><img class="part1-imgs" src="./imgs/part1.png" alt=""></a>
+                <a href="#"><img class="part1-imgs" src="./imgs/part1.png" alt=""></a>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="part2-container"></div>
+        </div>
+        <div class="part3">
+            <div class="part3-container"></div>
+        </div>
+        <div class="part4">
+            <div class="part4-container"></div>
+        </div>
+        <div class="left">
+            <ul>
+                <li><a href="#" style="background-color: #ff0036;"><div class="left-item" style="line-height: 36px;margin: 0 auto;">导航</div></a></li>
+                <li><a href="#"><div class="left-item">天猫超市</div></a></li>
+                <li><a href="#"><div class="left-item">天猫国际</div></a></li>
+                <li><a href="#"><div class="left-item">美丽人生</div></a></li>
+                <li><a href="#"><div class="left-item">潮电酷玩</div></a></li>
+                <li><a href="#"><div class="left-item">居家生活</div></a></li>
+                <li><a href="#"><div class="left-item">打造爱巢</div></a></li>
+                <li><a href="#"><div class="left-item">户外出行</div></a></li>
+                <li><a href="#" style="background-color: #ff0036;"><div class="left-item">猜你喜欢</div></a></li>
+                <li><a href="#" style="background-color: rgba(0, 0, 0, .3);"><div style="width: 36px;height: 13px;line-height: 13px;">↑</div><div class="left-item" style="line-height: 12px; width: 36px ;height: 13px;">顶部</div></a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="ani.js"></script>
+    <script>
+        var btn1=document.querySelector(".menu-hd1");
+        var block1=document.querySelector(".hd");
+        btn1.onmouseover=function(){
+            block1.style.display="block";
+            block1.style.zIndex="93110";
+        }
+        btn1.onmouseout=function(){
+            block1.style.display="none";
+        }
+        var btn2=document.querySelector(".menu-hd2");
+        var block2=document.querySelector(".bd");
+        btn2.onmouseover=function(){
+            block2.style.display="block";
+            block2.style.zIndex="93110";
+        }
+        btn2.onmouseout=function(){
+            block2.style.display="none";
+        }
+        var btn3=document.querySelector(".menu-hd3");
+        var block3=document.querySelector(".seller");
+        btn3.onmouseover=function(){
+            block3.style.display="block";
+            block3.style.zIndex="93110";
+        }
+        btn3.onmouseout=function(){
+            block3.style.display="none";
+        }
+        var btn4=document.querySelector(".menu-hd4");
+        var block4=document.querySelector(".web");
+        btn4.onmouseover=function(){
+            block4.style.display="block";
+            block4.style.zIndex="93110";
+        }
+        btn4.onmouseout=function(){
+            block4.style.display="none";
+        }
+        var btn5=document.querySelector(".menu-hd5");
+        var block5=document.querySelector(".imgs-container");
+        btn5.onmouseover=function(){
+            block5.style.display="block";
+            block5.style.zIndex="93110";
+        }
+        btn5.onmouseout=function(){
+            block5.style.display="none";
+        }
+        var lists=document.querySelectorAll(".backimg");
+        var btns=document.querySelectorAll(".slider-item")
+        var num=0;
+        var t=setInterval(function(){
+            num++;
+            if(num>lists.length-1){
+                num=0;
+            }
+            for(var i=0;i<lists.length;i++){
+                lists[i].style.opacity=0;
+                lists[i].style.zIndex=0;
+                btns[i].style.background="#000";
+            }
+            animate(lists[num],{
+                opacity:1
+            },300,Tween.Linear,function(){
+                lists[num].style.zIndex=1;
+                btns[num].style.background="#fff";
+            })
+        },5000)
+
+        for(let i=0;i<btns.length;i++){
+            num=i;
+            btns[i].onmouseover=function(){
+                // clearInterval(t);
+                for(var j=0;j<btns.length;j++){
+                    lists[j].style.opacity=0;
+                    lists[j].style.zIndex=0;
+                    btns[j].style.background="#000"
+                }
+                lists[i].style.opacity=1;
+                lists[i].style.zIndex=1;
+                btns[i].style.background="#fff"
+            }
+        }
+
+        var nav=document.querySelector(".left");
+        var p=document.querySelector(".part2-container");
+        // console.log(p.offsetLeft);
+        nav.style.left=p.offsetLeft-nav.offsetWidth+"px";
+        nav.style.top=(document.documentElement.clientHeight-nav.offsetHeight)/2+"px";
+        nav.style.zIndex="99999";
+        var fir=document.querySelector(".fir");
+        window.onscroll=function(){
+            var st=document.documentElement.scrollTop;
+            if(st>300){
+                fir.style.top=0;
+                fir.style.zIndex=9999;
+            }else{
+                fir.style.top=-50+"px";
+            }
+            if(st>300){
+                nav.style.transform="scale(1,1)";
+                nav.style.opacity=1;
+            }else{
+                nav.style.transform="scale(0,0)";
+                nav.style.opacity=0;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
