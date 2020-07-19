@@ -39,6 +39,10 @@ function css(obj,attr,val){
             case"color":
             case"borer":
             return getComputedStyle(obj,null)[attr];
+            break;
+            case"scrollTop":
+            return obj[attr];
+            break;
             default:
                 return parseInt(getComputedStyle(obj,null)[attr]);
         }
@@ -50,6 +54,10 @@ function css(obj,attr,val){
             case"opacity":
             case"border":
                 obj.style[attr]=val;
+                break;
+            case"scrollTop":
+                obj[attr]=val;
+                break;
             default:
                 obj.style[attr]=val+"px";
         }
